@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<ul>
+	{% for mensagem in mensagens %}
+		<li class="d-flex flex-column"> {{mensagem.id}} - {{mensagem.conteudo}}
+			<div>
+				<a class="btn" href="{{url_for('mensagens.recovery', id=mensagem.id)}}" style="background-color: #8A2BE2; color: white;">READ</a>
+				<a class="btn" href="{{url_for('mensagens.update', id=mensagem.id)}}" style="background-color: #9370DB; color: white;">UPDATE</a>
+				<a class="btn" href="{{url_for('mensagens.delete', id=mensagem.id)}}" style="background-color: #6A0DAD; color: white;">DELETE</a>
+			</div>
+		</li>
+	{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="container mt-4">
+    <h2>Deletar mensagem</h2>
+    <p>Excluir a mensagem {{mensagem.id}}: "{{mensagem.conteudo}}"?</p>
+
+    <form method="post" action="{{url_for('mensagens.delete', id=mensagem.id)}}">
+        <input class="btn" type="submit" value="Excluir" style="background-color: #800000; color: white;">
+    </form>
+
+    <a class="btn" href="{{url_for('mensagens.recovery')}}" style="background-color: #d8b4fe; color: white;">Cancelar</a>
+</div>
+{% endblock %}

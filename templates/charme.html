@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="message-charme">
+    <p><strong>Id:</strong> {{mensagem.id}}</p>
+    <p><strong>Conteúdo:</strong> {{mensagem.conteudo}}</p>
+    <a class="btn-lilas" href="{{url_for('mensagens.recovery')}}">Voltar para Mensagens</a>
+</div>
+{% endblock %}
