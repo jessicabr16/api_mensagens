@@ -1,8 +1,0 @@
-{% extends 'base.html' %}
-
-{% block conteudo %}
-<form action="{{url_for('mensagens.create')}}" method="post">
-    Conteúdo: <input type="text" name="conteudo">
-    <button class="btn btn-lilas" type="submit">Criar</button>
-</form>
-{% endblock %}
